@@ -6,6 +6,11 @@ const authenticatedOptions = (
   <Fragment>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
+    <Nav.Link href="#add-merch">Create Merch</Nav.Link>
+    <Nav.Link href="#merch">Index All Merch</Nav.Link>
+    <Nav.Link href="#merch-update/:merchId">Update Merch</Nav.Link>
+    <Nav.Link href="#merch/:merchId">View One Merch</Nav.Link>
+
   </Fragment>
 )
 
@@ -23,9 +28,9 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar bg="primary" variant="dark" expand="md">
+  <Navbar className="color-nav" variant="light" expand="md">
     <Navbar.Brand href="#">
-      react-auth-template
+      merchzoid
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
