@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Spinner from 'react-bootstrap/Spinner'
+import CheckOut from '../../CheckOut/CheckOut'
 
 import { viewMerch, deleteMerch } from '../../../api/auth'
 const ViewMerch = (props) => {
@@ -60,7 +61,7 @@ const ViewMerch = (props) => {
             <Card.Text>${merch.price}</Card.Text>
             {user._id === merch.owner ? <Link to={`/merch-update/${merch._id}`}>Edit Merch</Link> : ''}
             <button onClick={handleDelete}>Remove Merch</button>
-            {user._id === merch.owner ? <Link to={`/checkout/${merch._id}`}>Checkout</Link> : ''}
+            {user._id === merch.owner ? <CheckOut></CheckOut> : ''}
           </Card>
         </div>
       ) : <Spinner animation="border" className='dangerous' role="status">
