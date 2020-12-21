@@ -10,6 +10,7 @@ const authenticatedOptions = (
     <Nav.Link href="#merch">Index All Merch</Nav.Link>
     <Nav.Link href="#merch-update/:merchId">Update Merch</Nav.Link>
     <Nav.Link href="#merch/:merchId">View One Merch</Nav.Link>
+    <Nav.Link href="#checkout">Checkout Here</Nav.Link>
 
   </Fragment>
 )

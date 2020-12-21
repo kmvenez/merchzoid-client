@@ -21,6 +21,7 @@ import UpdateMerch from './components/MerchComponents/UpdateMerch/UpdateMerch'
 import DeleteMerch from './components/MerchComponents/DeleteMerch/DeleteMerch'
 import IndexMerch from './components/MerchComponents/IndexMerch/IndexMerch'
 import ViewMerch from './components/MerchComponents/ViewMerch/ViewMerch'
+import StripeButton from './components/CheckOut/CheckOut'
 
 class App extends Component {
   constructor () {
@@ -151,6 +152,14 @@ class App extends Component {
               match={match}
             />
           )} />
+          <AuthenticatedRoute user={user} path='/checkout' render={({ match, history }) => (
+            <StripeButton
+              user={user}
+              msgAlert={this.msgAlert}
+              match={match}
+              history={history}
+            />
+          )}/>
 
         </main>
       </Fragment>
