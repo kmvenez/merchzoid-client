@@ -6,10 +6,9 @@ const authenticatedOptions = (
   <Fragment>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
-    <Nav.Link href="#add-merch">Create Merch</Nav.Link>
-    <Nav.Link href="#merch">Index All Merch</Nav.Link>
-    <Nav.Link href="#merch-update/:merchId">Update Merch</Nav.Link>
-    <Nav.Link href="#merch/:merchId">View One Merch</Nav.Link>
+    <Nav.Link href="#add-merch">Sell Your Stuff</Nav.Link>
+    <Nav.Link href="#merch">For Sale</Nav.Link>
+    <Nav.Link href="#merch-update/:merchId">Update Your Listing</Nav.Link>
     <Nav.Link href="#checkout">Checkout Here</Nav.Link>
 
   </Fragment>

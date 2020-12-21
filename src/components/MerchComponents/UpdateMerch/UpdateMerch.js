@@ -70,6 +70,13 @@ const UpdateMerch = (props) => {
         name="description"
         onChange={handleChange}
       />
+      <label>Price</label>
+      <input
+        placeholder="'WHAT?' CHAWKLIT!"
+        value={merch.price}
+        name="price"
+        onChange={handleChange}
+      />
       <button type="submit">Submit</button>
       <Link to={'update-merch/'}>
         <button>Cancel</button>

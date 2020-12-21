@@ -133,7 +133,8 @@ export const createMerch = (merch, user) => {
       merch: {
         title: merch.title,
         type: merch.type,
-        description: merch.description
+        description: merch.description,
+        price: merch.price
       }
     }
   })
@@ -149,9 +150,12 @@ export const viewMerch = (user, id) => {
   })
 }
 
-export const indexMerch = (user, id) => {
+export const indexMerch = (user) => {
   return axios({
     url: apiUrl + '/merch/',
+    headers: {
+      Authorization: 'Bearer ' + user.token
+    },
     method: 'GET'
   }
   )
@@ -168,7 +172,8 @@ export const updateMerch = (user, merch, id) => {
       merch: {
         title: merch.title,
         type: merch.type,
-        description: merch.description
+        description: merch.description,
+        price: merch.price
       }
     }
   })

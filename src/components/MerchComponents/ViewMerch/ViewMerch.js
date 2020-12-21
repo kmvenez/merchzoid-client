@@ -57,8 +57,10 @@ const ViewMerch = (props) => {
             <Card.Title>{merch.title}</Card.Title>
             <Card.Text>{merch.type}</Card.Text>
             <Card.Text>Description: {merch.description}</Card.Text>
+            <Card.Text>${merch.price}</Card.Text>
             {user._id === merch.owner ? <Link to={`/merch-update/${merch._id}`}>Edit Merch</Link> : ''}
             <button onClick={handleDelete}>Remove Merch</button>
+            {user._id === merch.owner ? <Link to={`/checkout/${merch._id}`}>Checkout</Link> : ''}
           </Card>
         </div>
       ) : <Spinner animation="border" className='dangerous' role="status">

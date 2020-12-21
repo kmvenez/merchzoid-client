@@ -4,10 +4,10 @@ import { indexMerch } from '../../../api/auth'
 
 const IndexMerch = props => {
   const [merchArray, setMerchArray] = useState(null)
-  const { user, match } = props
+  const { user } = props
 
   useEffect(() => {
-    indexMerch(user, match.params.merchId)
+    indexMerch(user)
       .then(res => {
         setMerchArray(res.data.merch)
       })
@@ -21,10 +21,14 @@ const IndexMerch = props => {
       <div>
         {merchArray.map(merch => (
           <div key={merch._id}>
-            <h2>{merch.title}</h2>
-            <h2>{merch.type}</h2>
-            <h2>{merch.description}</h2>
-            <Link to={`/reviews/${merch._id}`}>Edit Merch</Link>
+            <h2><Link to={`/merch/${merch._id}`}>{merch.title}</Link></h2>
+            <p>Please click the title to see more details or begin purchase.</p>
+            <p>{merch.type}</p>
+            <p>{merch.description}</p>
+            <p>${merch.price}</p>
+            <p>Listing ID: {merch._id}</p>
+            <Link to={`/merch/${merch._id}`}>Edit Merch</Link>
+            <br/>
           </div>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../../apiConfig'
 import Form from 'react-bootstrap/Form'
@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 
 const CreateMerch = props => {
   const merchId = props.match.params.merchId
-  const [merch, setMerch] = useState({ title: '', type: '', description: '', merch: merchId })
+  const [merch, setMerch] = useState({ title: '', type: '', description: '', price: '', merch: merchId })
   const [createdMerchId, setCreatedMerchId] = useState(null)
   const { msgAlert } = props
 
@@ -48,7 +48,7 @@ const CreateMerch = props => {
   }
 
   if (createdMerchId) {
-    return <Redirect to={`/reviews/${createdMerchId}`} />
+    return <Redirect to={`/merch/${createdMerchId}`} />
   }
 
   return (
@@ -83,14 +83,22 @@ const CreateMerch = props => {
               onChange={handleChange}
             />
           </Form.Group>
+          <Form.Group controlId="price">
+            <Form.Label>Price</Form.Label>
+            <Form.Control
+              placeholder="How much are you looking for? $ USD."
+              value={merch.price}
+              name="price"
+              onChange={handleChange}
+            />
+          </Form.Group>
 
           <Button
             type="submit"
             Link to={'/merch'}>Submit</Button><br/>
-
-          <Link to={'/'}>
-            <button type="submit">Go Home</button>
-          </Link>
+          <Button
+            type="submit"
+            Link to={'/'}>Go Home</Button>
 
         </Form>
       </div>
