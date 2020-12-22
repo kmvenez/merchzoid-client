@@ -10,11 +10,11 @@ import SignIn from './components/SignIn/SignIn'
 import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 // Reviews
-import CreateReview from './components/ReviewComponents/CreateReview/CreateReview'
-import UpdateReview from './components/ReviewComponents/UpdateReview/UpdateReview'
-import DeleteReview from './components/ReviewComponents/DeleteReview/DeleteReview'
-import ViewReview from './components/ReviewComponents/ViewReview/ViewReview'
-import ViewReviews from './components/ReviewComponents/ViewReviews/ViewReviews'
+// import CreateReview from './components/ReviewComponents/CreateReview/CreateReview'
+// import UpdateReview from './components/ReviewComponents/UpdateReview/UpdateReview'
+// import DeleteReview from './components/ReviewComponents/DeleteReview/DeleteReview'
+// import ViewReview from './components/ReviewComponents/ViewReview/ViewReview'
+// import ViewReviews from './components/ReviewComponents/ViewReviews/ViewReviews'
 // Merch
 import CreateMerch from './components/MerchComponents/CreateMerch/CreateMerch'
 import UpdateMerch from './components/MerchComponents/UpdateMerch/UpdateMerch'
@@ -64,6 +64,9 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
+
+        {// Routes for authentication.
+        }
         <main className="container">
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
@@ -77,43 +80,6 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
-
-          <AuthenticatedRoute user={user} path='/create-review/:merchId' render={({ match }) => (
-            <CreateReview
-              match={match}
-              user={user}
-              msgAlert={this.msgAlert}
-            />
-          )} />
-          <AuthenticatedRoute user={user} exact path='/view-a-review/:reviewId' render={({ match }) => (
-            <ViewReview
-              user={user}
-              msgAlert={this.msgAlert}
-              match={match}
-            />
-          )}/>
-          <AuthenticatedRoute user={user} path='/delete-review/:reviewId' render={({ match }) => (
-            <DeleteReview
-              msgAlert={this.msgAlert}
-              user={user}
-              match={match}
-            />
-          )} />
-          <AuthenticatedRoute user={user} path='/update-review/:reviewId' render={({ match, history }) => (
-            <UpdateReview
-              match={match}
-              history={history}
-              user={user}
-              msgAlert={this.msgAlert}
-            />
-          )}/>
-          <Route user={user} exact path='/reviews/:reviewsId/reviews' render={({ match }) => (
-            <ViewReviews
-              user={user}
-              msgAlert={this.msgAlert}
-              match={match}
-            />
-          )}/>
 
           <AuthenticatedRoute user={user} path='/add-merch' render={({ match }) => (
             <CreateMerch
@@ -160,6 +126,44 @@ class App extends Component {
             />
           )}/>
 
+          {// Routes for Reviews - turned off for the time being.
+          // <AuthenticatedRoute user={user} path='/create-review/:merchId' render={({ match }) => (
+          //   <CreateReview
+          //     match={match}
+          //     user={user}
+          //     msgAlert={this.msgAlert}
+          //   />
+          // )} />
+          // <AuthenticatedRoute user={user} exact path='/view-a-review/:reviewId' render={({ match }) => (
+          //   <ViewReview
+          //     user={user}
+          //     msgAlert={this.msgAlert}
+          //     match={match}
+          //   />
+          // )}/>
+          // <AuthenticatedRoute user={user} path='/delete-review/:reviewId' render={({ match }) => (
+          //   <DeleteReview
+          //     msgAlert={this.msgAlert}
+          //     user={user}
+          //     match={match}
+          //   />
+          // )} />
+          // <AuthenticatedRoute user={user} path='/update-review/:reviewId' render={({ match, history }) => (
+          //   <UpdateReview
+          //     match={match}
+          //     history={history}
+          //     user={user}
+          //     msgAlert={this.msgAlert}
+          //   />
+          // )}/>
+          // <Route user={user} exact path='/reviews/:reviewsId/reviews' render={({ match }) => (
+          //   <ViewReviews
+          //     user={user}
+          //     msgAlert={this.msgAlert}
+          //     match={match}
+          //   />
+          // )}/>
+          }
         </main>
       </Fragment>
     )

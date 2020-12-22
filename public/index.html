@@ -11,19 +11,28 @@ unless you know exactly what you're doing! -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
-    <title>React App</title>
+    <title>MERCHZOID</title>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
 
-
     <div id="root"></div>
+    <!-- // Here's what should always display on the page, regardless of authenticated or not. -->
+    <br>
+    <img src="https://i.imgur.com/bPJUUS2.png" alt="Merchzoid Logo">
+    <h1>Welcome to <span id="bodylogo">merchzoid.</span></h1>
+    <p id="merchiename">(His name is MERCH-E, he'll always be in the lower right-hand corner if you get lost - cute, right?)</p>
+    <p>The first of it's kind - Merchzoid was created with user needs at the top of the list.  With a few clicks of a button, upload your old merch and pocket the spare change.  Utilizing a secure Stripe connection, you'll never have to think twice about your information - it's in safe hands (our <span id="rockhands">rock</span> hands, that is.)</p>
 
+<!-- // This is the code that intelliticks provided to implement their chatbot feature. -->
 <script type='text/javascript'>
 (function(I, L, T, i, c, k, s) {if(I.iticks) return;I.iticks = {host:c, settings:s, clientId:k, cdn:L, queue:[]};var h = T.head || T.documentElement;var e = T.createElement(i);var l = I.location;e.async = true;e.src = (L||c)+'/client/inject-v2.min.js';h.insertBefore(e, h.firstChild);I.iticks.call = function(a, b) {I.iticks.queue.push([a, b]);};})(window, 'https://cdn.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com', 'SbCskWZ4RStZ4jmxq_c', {});
 </script>
 
+  <!-- // Just to spice up the UI a little. -->
+  <footer>	&#169; katiecodes</footer>
   </body>
+
 </html>

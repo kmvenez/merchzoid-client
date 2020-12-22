@@ -55,72 +55,6 @@ export const changePassword = (passwords, user) => {
   })
 }
 
-// Review Axios
-export const createReview = (review, user) => {
-  return axios({
-    url: apiUrl + '/create-reviews',
-    method: 'POST',
-    headers: {
-      'Authorization': 'Bearer ' + user.token
-    },
-    data: {
-      review: {
-        title: review.title,
-        body: review.body,
-        rating: review.rating
-      }
-    }
-  })
-}
-
-export const viewReview = (user, id) => {
-  return axios({
-    url: apiUrl + '/reviews/' + id,
-    headers: {
-      Authorization: 'Bearer ' + user.token
-    },
-    method: 'GET'
-  })
-}
-
-export const viewReviews = (user, id) => {
-  return axios({
-    url: apiUrl + '/reviews/' + id,
-    headers: {
-      Authorization: 'Bearer ' + user.token
-    },
-    method: 'GET'
-  }
-  )
-}
-
-export const updateReview = (user, review, id) => {
-  return axios({
-    url: apiUrl + '/reviews/' + id,
-    headers: {
-      Authorization: 'Bearer ' + user.token
-    },
-    method: 'PATCH',
-    data: {
-      review: {
-        title: review.title,
-        body: review.body,
-        rating: review.rating
-      }
-    }
-  })
-}
-
-export const deleteReview = (user, id) => {
-  return axios({
-    url: apiUrl + '/reviews/' + id,
-    headers: {
-      Authorization: 'Bearer ' + user.token
-    },
-    method: 'DELETE'
-  })
-}
-
 // Merch Axios
 export const createMerch = (merch, user) => {
   return axios({
@@ -134,7 +68,8 @@ export const createMerch = (merch, user) => {
         title: merch.title,
         type: merch.type,
         description: merch.description,
-        price: merch.price
+        price: merch.price,
+        image: merch.image
       }
     }
   })
@@ -173,7 +108,8 @@ export const updateMerch = (user, merch, id) => {
         title: merch.title,
         type: merch.type,
         description: merch.description,
-        price: merch.price
+        price: merch.price,
+        image: merch.image
       }
     }
   })
@@ -188,3 +124,69 @@ export const deleteMerch = (user, id) => {
     method: 'DELETE'
   })
 }
+
+// // Review Axios - turned these off for now, can re-activate once I add the second resource
+// export const createReview = (review, user) => {
+//   return axios({
+//     url: apiUrl + '/create-reviews',
+//     method: 'POST',
+//     headers: {
+//       'Authorization': 'Bearer ' + user.token
+//     },
+//     data: {
+//       review: {
+//         title: review.title,
+//         body: review.body,
+//         rating: review.rating
+//       }
+//     }
+//   })
+// }
+//
+// export const viewReview = (user, id) => {
+//   return axios({
+//     url: apiUrl + '/reviews/' + id,
+//     headers: {
+//       Authorization: 'Bearer ' + user.token
+//     },
+//     method: 'GET'
+//   })
+// }
+//
+// export const viewReviews = (user, id) => {
+//   return axios({
+//     url: apiUrl + '/reviews/' + id,
+//     headers: {
+//       Authorization: 'Bearer ' + user.token
+//     },
+//     method: 'GET'
+//   }
+//   )
+// }
+//
+// export const updateReview = (user, review, id) => {
+//   return axios({
+//     url: apiUrl + '/reviews/' + id,
+//     headers: {
+//       Authorization: 'Bearer ' + user.token
+//     },
+//     method: 'PATCH',
+//     data: {
+//       review: {
+//         title: review.title,
+//         body: review.body,
+//         rating: review.rating
+//       }
+//     }
+//   })
+// }
+//
+// export const deleteReview = (user, id) => {
+//   return axios({
+//     url: apiUrl + '/reviews/' + id,
+//     headers: {
+//       Authorization: 'Bearer ' + user.token
+//     },
+//     method: 'DELETE'
+//   })
+// }

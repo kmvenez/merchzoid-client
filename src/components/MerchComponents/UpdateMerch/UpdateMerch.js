@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import { updateMerch, viewMerch } from '../../../api/auth'
 
+// This is the component used to update the merch resource.
 const UpdateMerch = (props) => {
-  const [merch, setMerch] = useState({ title: '', type: '', description: '' })
+  const [merch, setMerch] = useState({ title: '', type: '', description: '', image: '' })
   const [updated, setUpdated] = useState(false)
   const { msgAlert } = props
 
@@ -47,6 +48,7 @@ const UpdateMerch = (props) => {
     return <Redirect to={`/merch/${props.match.params.merchId}`} />
   }
 
+  // This is what displays on the page if it loaded correctly.
   return (
     <form onSubmit={handleSubmit}>
       <label>Title</label>
@@ -77,7 +79,9 @@ const UpdateMerch = (props) => {
         name="price"
         onChange={handleChange}
       />
+
       <button type="submit">Submit</button>
+
       <Link to={'update-merch/'}>
         <button>Cancel</button>
       </Link>

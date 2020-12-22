@@ -3,7 +3,9 @@ import { Link, withRouter } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Spinner from 'react-bootstrap/Spinner'
 import CheckOut from '../../CheckOut/CheckOut'
+// import ReviewCreate from '../../ReviewComponents/CreateReview/CreateReview'
 
+// This is the component to view one single, specific merch resource and delete it if requested.
 import { viewMerch, deleteMerch } from '../../../api/auth'
 const ViewMerch = (props) => {
   // const [loading, setLoading] = useState(true)
@@ -50,6 +52,7 @@ const ViewMerch = (props) => {
       })
   }
 
+  // This is what displays on the page if it ran successfully.
   return (
     <div>
       {merch ? (
@@ -59,7 +62,8 @@ const ViewMerch = (props) => {
             <Card.Text>{merch.type}</Card.Text>
             <Card.Text>Description: {merch.description}</Card.Text>
             <Card.Text>${merch.price}</Card.Text>
-            {user._id === merch.owner ? <Link to={`/merch-update/${merch._id}`}>Edit Merch</Link> : ''}
+            <Card.Img variant='bottom' src={merch.image}></Card.Img>
+            {user._id === merch.owner ? <Link to={`/merch-update/${merch._id}`}>Update Your Listing</Link> : ''}
             <button onClick={handleDelete}>Remove Merch</button>
             {user._id === merch.owner ? <CheckOut></CheckOut> : ''}
           </Card>
