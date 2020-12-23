@@ -26,7 +26,7 @@ const CreateMerch = props => {
   const handleSubmit = (event) => {
     event.preventDefault()
     axios({
-      url: `${apiUrl}/merch`,
+      url: `${apiUrl}/merch/`,
       method: 'POST',
       headers: {
         'Authorization': 'Bearer ' + props.user.token
