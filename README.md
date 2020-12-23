@@ -22,7 +22,7 @@ Deleting once a purchase is completed, not just when clicking the 'Delete' butto
 
 [ERD](https://imgur.com/a/Xu5Wb5G)
 
-[Alternate Repo](https://github.com/kmvenez/merchzoid-api)
+[Alternate Repo - API side](https://github.com/kmvenez/merchzoid-api)
 
 [Heroku](https://thawing-earth-07651.herokuapp.com/)
 
