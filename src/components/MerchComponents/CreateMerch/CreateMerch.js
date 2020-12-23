@@ -101,7 +101,7 @@ const CreateMerch = props => {
             <Form.Label>Image</Form.Label>
             <OverlayTrigger
               overlay={<Tooltip id="tooltip-disabled">
-              Make sure you put the direct link to the image so it stores correctly.
+              Make sure you put the direct link to the image so it stores correctly - try right clicking on an image in a web browser and selecting Copy Image Address.
               </Tooltip>}>
               <span className="d-inline-block">
                 <Button
