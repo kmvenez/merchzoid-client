@@ -12,6 +12,9 @@ This application began by setting up the backend with Express.  Once that was up
 * As a signed in user, I would like to sign out.
 * As a signed in user, I want to be able to upload and delete my merchandise as I see fit.
 
+# Set up and installation instructions for front end application:
+Once a user logs in, they should be able to upload and run transactions for their merchandise they're trying to sell.
+
 # Technologies Used:
 Javascript, HTML/CSS, React, React Bootstrap, Axios, Mongoose, Express.
 
