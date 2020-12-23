@@ -91,7 +91,7 @@ const CreateMerch = props => {
           <Form.Group controlId="price">
             <Form.Label>Price ($)</Form.Label>
             <Form.Control
-              placeholder="How much are you looking for? $ USD."
+              placeholder="How much are you looking for? $ USD - don't use special characters."
               value={merch.price}
               name="price"
               onChange={handleChange}
@@ -111,7 +111,7 @@ const CreateMerch = props => {
               </span>
             </OverlayTrigger>
             <Form.Control
-              placeholder="Input the URL here"
+              placeholder="Input the direct image URL here"
               value={merch.image}
               name="image"
               onChange={handleChange}
