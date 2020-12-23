@@ -18,12 +18,12 @@ Javascript, HTML/CSS, React, React Bootstrap, Axios, Mongoose, Express.
 # Unsolved Problems:
 Deleting once a purchase is completed, not just when clicking the 'Delete' button.
 
-[Wireframe:](https://imgur.com/7KitEdD)
+[Wireframe](https://imgur.com/7KitEdD)
 
-[ERD:](https://imgur.com/a/Xu5Wb5G)
+[ERD](https://imgur.com/a/Xu5Wb5G)
 
-[Alternate Repo:](https://github.com/kmvenez/merchzoid-api)
+[Alternate Repo - API side](https://github.com/kmvenez/merchzoid-api)
 
-[Heroku:](https://thawing-earth-07651.herokuapp.com/)
+[Heroku](https://thawing-earth-07651.herokuapp.com/)
 
-[Deployed Client-Side Link:](https://kmvenez.github.io/merchzoid-client/#/)
+[Deployed Client-Side Link](https://kmvenez.github.io/merchzoid-client/#/)
