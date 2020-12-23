@@ -1,9 +1,9 @@
 This application is at it's core an ecommerce platform.  It's designed with a simplistic UI for users to be able to upload old band merchandise for a designated price, and utilize Stripe to perform the transaction.
 
-# Planning Story:#
+# Planning Story:
 This application began by setting up the backend with Express.  Once that was up and functional, then the frontend was created with React and Bootstrap.
 
-# User Stories:#
+# User Stories:
 * As a person looking to make a few extra dollars by cleaning out my closet, I want to be able to upload my item for sale with minimal inputs on a UI that isn't too crowded.
 * As a person who is a fan of a certain band but on a tighter budget, I want to be able to purchase their merchandise at a lower cost from a trustworthy source.
 * As a unregistered user, I would like to sign up with email and password.
@@ -12,10 +12,10 @@ This application began by setting up the backend with Express.  Once that was up
 * As a signed in user, I would like to sign out.
 * As a signed in user, I want to be able to upload and delete my merchandise as I see fit.
 
-# Technologies Used:#
+# Technologies Used:
 Javascript, HTML/CSS, React, React Bootstrap, Axios, Mongoose, Express.
 
-# Unsolved Problems:#
+# Unsolved Problems:
 Deleting once a purchase is completed, not just when clicking the 'Delete' button.
 
 [Wireframe:](https://imgur.com/7KitEdD)
